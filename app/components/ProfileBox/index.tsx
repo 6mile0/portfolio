@@ -23,10 +23,10 @@ export default function ProfileBox({ title, data }: Props) {
     return (
         <div className="mb-5">
             <TitleBox title={title} />
-            <table className="w-full text-gray-500">
+            <table className="w-full text-gray-500 dark:text-gray-300">
                 <tbody>
                     <tr className="text-left border-b">
-                        <th className="font-medium text-md pl-4 text-gray-900 w-14">
+                        <th className="font-medium text-md pl-4 text-gray-900 w-14 dark:text-gray-200">
                             年齢
                         </th>
                         <td className="px-8 py-2 text-sm">
@@ -34,7 +34,7 @@ export default function ProfileBox({ title, data }: Props) {
                         </td>
                     </tr>
                     <tr className="text-left border-b">
-                        <th className="font-medium text-md pl-4 text-gray-900">
+                        <th className="font-medium text-md pl-4 text-gray-900 dark:text-gray-200">
                             趣味
                         </th>
                         <td className="px-8 py-2 text-sm">
@@ -49,7 +49,7 @@ export default function ProfileBox({ title, data }: Props) {
                         </td>
                     </tr>
                     <tr className="text-left border-b">
-                        <th className="font-medium text-md pl-4 text-gray-900">
+                        <th className="font-medium text-md pl-4 text-gray-900 dark:text-gray-200">
                             所属
                         </th>
                         <td className="px-8 py-2 text-sm">
@@ -57,7 +57,7 @@ export default function ProfileBox({ title, data }: Props) {
                         </td>
                     </tr>
                     <tr className="text-left border-b">
-                        <th className="font-medium text-md pl-4 text-gray-900">
+                        <th className="font-medium text-md pl-4 text-gray-900 dark:text-gray-200">
                             資格
                         </th>
                         <td className="px-8 py-2 text-sm">

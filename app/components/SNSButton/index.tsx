@@ -6,7 +6,6 @@ import { SiGithub } from "react-icons/si";
 import { SiZenn } from "react-icons/si";
 import { SiQiita } from "react-icons/si";
 import { SiKeybase } from "react-icons/si";
-import { SiBlogger } from "react-icons/si";
 import { RiGlobalLine } from "react-icons/ri";
 
 interface Props {
@@ -51,7 +50,7 @@ export default function SNSButton({ to, serviceName, className}: Props) {
     const iconData = iconLists.find(val => val.serviceName == serviceName);
     return (
         <Link href={to} className={className}>
-            <span className="text-2xl">{iconData?.icon}</span>
+            <span className="text-2xl dark:text-gray-200">{iconData?.icon}</span>
         </Link>
     )
 }
