@@ -1,5 +1,6 @@
-import TitleBox from "../TitleBox";
-import { Profile } from "../types/custom";
+import Link from "next/link";
+import TitleBox from "../../common/TitleBox";
+import { Profile } from "../../types/custom";
 
 interface Props {
     title: string;
@@ -23,21 +24,21 @@ export default function ProfileBox({ title, data }: Props) {
     return (
         <div className="mb-5">
             <TitleBox title={title} />
-            <table className="w-full text-gray-500 dark:text-gray-300">
+            <table className="text-gray-500 dark:text-gray-300">
                 <tbody>
                     <tr className="text-left border-b">
-                        <th className="font-medium text-md pl-4 text-gray-900 w-14 dark:text-gray-200">
-                            年齢
+                        <th className="font-medium w-24 text-md pl-4 text-gray-900 w-14 dark:text-gray-200">
+                            誕生
                         </th>
-                        <td className="px-8 py-2 text-sm">
-                            {age} 歳 (2003/10/04)
+                        <td className="py-2 text-sm">
+                            2003/10/04 ( {age} 歳 )
                         </td>
                     </tr>
                     <tr className="text-left border-b">
                         <th className="font-medium text-md pl-4 text-gray-900 dark:text-gray-200">
                             趣味
                         </th>
-                        <td className="px-8 py-2 text-sm">
+                        <td className="py-2 text-sm">
                             {
                                 data.hobby.map((value, key) => {
                                     if (key == (data.hobby.length - 1)) {
@@ -52,20 +53,17 @@ export default function ProfileBox({ title, data }: Props) {
                         <th className="font-medium text-md pl-4 text-gray-900 dark:text-gray-200">
                             所属
                         </th>
-                        <td className="px-8 py-2 text-sm">
+                        <td className="py-2 text-sm">
                             {data.belongTo}
                         </td>
                     </tr>
                     <tr className="text-left border-b">
                         <th className="font-medium text-md pl-4 text-gray-900 dark:text-gray-200">
-                            資格
+                            公開鍵
                         </th>
-                        <td className="px-8 py-2 text-sm">
-                            {
-                                data.certification.map((value, key) => {
-                                    return <p key={key}>{value}</p>
-                                })
-                            }
+                        <td className="py-2 text-sm">
+                            <p><Link href={"https://github.com/6mile0.keys"} className="text-gray-900 border-b hover:text-blue-700">Secure Shell</Link></p>
+                            <p><Link href={"https://github.com/6mile0.keys"} className="text-gray-900 border-b hover:text-blue-700">The GNU Privacy Guard</Link></p>
                         </td>
                     </tr>
                 </tbody>

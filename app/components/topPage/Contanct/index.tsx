@@ -1,4 +1,4 @@
-import TitleBox from "../TitleBox"
+import TitleBox from "../../common/TitleBox"
 
 export default function Contact() {
     return (

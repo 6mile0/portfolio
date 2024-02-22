@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
-import MainBox from "./components/MainBox";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ToggleDarkMode from "./components/ToggleDarkModeBtn";
+import 'react-tooltip/dist/react-tooltip.css'
 
 const notoSans = Noto_Sans({ subsets: ["latin"] })
 
@@ -21,12 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${notoSans.className} bg-custom-background-right dark:bg-custom-background-dark`}>
-        <MainBox>
-          <Header />
-          {children}
-          <Footer />
-        </MainBox>
-        <ToggleDarkMode/>
+        {children}
       </body>
     </html>
   );

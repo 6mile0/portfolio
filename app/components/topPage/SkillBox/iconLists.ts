@@ -8,10 +8,6 @@ interface LangBadge {
 
 const langList: LangBadge[] = [
     {
-        name: "JavaScript",
-        icon: simpleIcon.SiJavascript
-    },
-    {
         name: "TypeScript",
         icon: simpleIcon.SiTypescript
     },
@@ -62,6 +58,10 @@ const langList: LangBadge[] = [
     {
         name: "Flutter",
         icon: simpleIcon.SiFlutter
+    },
+    {
+        name: "Docker",
+        icon: simpleIcon.SiDocker
     }
 ]
 

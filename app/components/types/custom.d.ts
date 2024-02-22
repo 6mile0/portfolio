@@ -3,6 +3,8 @@ export interface Profile {
     belongTo: string;
     certification: string[],
     hobby: string[]
+    pgpKey: string;
+    sshKeyListUrl: string;
 }
 
 
@@ -16,4 +18,9 @@ export interface TimeLine {
     title: string;
     descriptions?: string;
     buttons?: TimeLineButton[]
+}
+
+export interface PathInfo {
+    title: string;
+    to: string;
 }

@@ -1,18 +1,23 @@
-import Contact from "./components/Contanct";
-import ProfileBox from "./components/ProfileBox";
-import SkillBox from "./components/SkillBox";
-import TimeLineBox from "./components/TimeLineBox";
-import TitleBox from "./components/TitleBox";
+import Contact from "./components/topPage/Contanct";
+import ProfileBox from "./components/topPage/ProfileBox";
+import SkillBox from "./components/topPage/SkillBox";
+import TimeLineBox from "./components/topPage/TimeLineBox";
+import TitleBox from "./components/common/TitleBox";
 import { Profile, TimeLine } from "./components/types/custom";
+import Header from "./components/common/Header";
+import MainBox from "./components/common/MainBox";
+import Footer from "./components/common/Footer";
 
 const profileData: Profile = {
   birthday: "2003,10,04",
   belongTo: "東京工科大学 コンピュータサイエンス学部",
   certification: ["普通自動車第一種運転免許"],
-  hobby: ["旅行", "プログラミング", "サーバ保守"]
+  hobby: ["旅行", "プログラミング", "サーバ保守"],
+  pgpKey: "",
+  sshKeyListUrl: "https://github.com/6mile0.keys"
 }
 
-const mainSkills: string[] = ["JavaScript", "TypeScript", "React", "Next.js", "Git", "Kotlin", "Firebase"];
+const mainSkills: string[] = ["TypeScript", "React", "Next.js", "Git", "Kotlin", "Firebase", "Docker"];
 const hadSkills = ["Node.js", "Express.js", "Python", "FastAPI"];
 const studyingSkills = ["Go", "Flutter"];
 
@@ -62,18 +67,22 @@ const timelineData: TimeLine[] = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:flex-row">
-      <div className="flex-1 md:p-6 lg:p-8">
-        <ProfileBox title="Profile" data={profileData} />
-        <TitleBox title="Skills" />
-        <SkillBox titleName="Work Experience" skillItems={mainSkills} />
-        <SkillBox titleName="Experience" skillItems={hadSkills} />
-        <SkillBox titleName="Studying" skillItems={studyingSkills} />
-        <Contact />
-      </div>
-      <div className="flex-1 md:p-6 lg:p-8">
-        <TimeLineBox title="TimeLine" data={timelineData} />
-      </div>
-    </div>
+      <MainBox>
+        <Header />
+        <div className="flex flex-col md:flex-row">
+          <div className="flex-1 md:p-6 lg:p-8">
+            <ProfileBox title="Profile" data={profileData} />
+            <TitleBox title="Skills" />
+            <SkillBox titleName="Work Experience" skillItems={mainSkills} />
+            <SkillBox titleName="Experience" skillItems={hadSkills} />
+            <SkillBox titleName="Studying" skillItems={studyingSkills} />
+            <Contact />
+          </div>
+          <div className="flex-1 md:p-6 lg:p-8">
+            <TimeLineBox title="TimeLine" data={timelineData} />
+          </div>
+        </div>
+        <Footer />
+      </MainBox>
   );
 }

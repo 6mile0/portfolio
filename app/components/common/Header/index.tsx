@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image"
-import ProfileImage from "../../assets/icon.jpg"
+import ProfileImage from "../../../assets/icon.jpg"
 import SNSButton from "../SNSButton"
+
+import { Tooltip } from 'react-tooltip'
 
 export default function Header() {
     return (
@@ -12,13 +16,14 @@ export default function Header() {
             </div>
             <div className="md:ml-auto mt-6">
                 <div className="flex">
-                    <SNSButton to="https://twitter.com/6mile0" serviceName="X" className="mr-6"/>
+                    <SNSButton to="https://twitter.com/6mile0" serviceName="X" className="mr-6" />
+                    <SNSButton serviceName="Discord" className="mr-6" tooltipId="discord-tooltip" tooltipContent="6mile" />
                     <SNSButton to="https://zenn.dev/6mile" serviceName="Zenn" className="mr-6" />
-                    <SNSButton to="https://github.com/6mile0" serviceName="GitHub" className="mr-6"/>
-                    <SNSButton to="https://keybase.io/6mile" serviceName="KeyBase" className="mr-6"/>
-                    <SNSButton to="https://twitter.com/6mile0" serviceName="Blog" className="mr-6"/>
+                    <SNSButton to="https://github.com/6mile0" serviceName="GitHub" className="mr-6" />
+
                 </div>
             </div>
+            <Tooltip id="discord-tooltip" />
         </div>
     )
 }
