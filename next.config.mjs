@@ -1,6 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
+    reactStrictMode: true,
+    swcMinify: true,
+    unoptimized: false,
+    images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'images.6mile.dev',
+          },
+        ],
+      },
 };
 
 export default nextConfig;

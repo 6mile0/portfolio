@@ -17,7 +17,7 @@ const profileData: Profile = {
   sshKeyListUrl: "https://github.com/6mile0.keys"
 }
 
-const mainSkills: string[] = ["TypeScript", "React", "Next.js", "Git", "Kotlin", "Firebase", "Docker"];
+const mainSkills: string[] = ["TypeScript", "React", "Next.js", "Git", "Kotlin", "Docker"];
 const hadSkills = ["Node.js", "Express.js", "Python", "FastAPI"];
 const studyingSkills = ["Go", "Flutter"];
 
