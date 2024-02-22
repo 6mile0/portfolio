@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image"
-import ProfileImage from "../../../assets/icon.jpg"
 import SNSButton from "../SNSButton"
 
 import { Tooltip } from 'react-tooltip'
@@ -9,7 +7,7 @@ import { Tooltip } from 'react-tooltip'
 export default function Header() {
     return (
         <div className="pt-10 pb-10 flex text-gray-600 items-start flex-col md:flex-row md:items-center lg:pt-20 lg:pb-10">
-            <Image src={ProfileImage} alt="aaa" className="w-20 h-20 rounded-full mb-4 shadow-sm" />
+            <img src={"https://images.6mile.dev/icon.jpg"} alt="6mile-icon" className="w-20 h-20 rounded-full mb-4 shadow-sm" />
             <div className="md:px-4">
                 <h1 className="text-2xl text-gray-900 md:text-3xl lg:text-4xl dark:text-gray-200">6mile.dev</h1>
                 <p className="mt-1 text-gray-500 dark:text-gray-300">Hello! I&apos;m Kakeru Hokida (a.k.a 6mile / ろくまいる).</p>
