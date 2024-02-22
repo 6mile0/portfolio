@@ -8,6 +8,7 @@ const notoSans = Noto_Sans({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "6mile.dev",
   description: "6mile's site",
+  icons: [{ rel: 'icon', url: "https://6mile.dev/favicon.ico"}],
   openGraph: {
     type: "website",
     title: "6mile.dev",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://6mile.dev",
     images: [
       {
-        url: "https://images.6mile.dev/icon.jpg",
+        url: "https://6mile.dev/me.webp",
         width: 128,
         height: 128,
         alt: "6mile.dev",
