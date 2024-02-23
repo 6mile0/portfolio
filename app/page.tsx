@@ -3,9 +3,9 @@ import ProfileBox from "./components/topPage/ProfileBox";
 import SkillBox from "./components/topPage/SkillBox";
 import TimeLineBox from "./components/topPage/TimeLineBox";
 import TitleBox from "./components/common/TitleBox";
-import { Profile, TimeLine } from "./components/types/custom";
+import { Profile } from "./types/profile";
+import { TimeLine } from "./types/timeLine";
 import Header from "./components/common/Header";
-import MainBox from "./components/common/MainBox";
 import Footer from "./components/common/Footer";
 
 const profileData: Profile = {
@@ -67,8 +67,8 @@ const timelineData: TimeLine[] = [
 
 export default function Home() {
   return (
-      <MainBox>
-        <Header />
+      <>
+        <Header title="6mile.dev" description="Hello! I&apos;m Kakeru Hokida (a.k.a 6mile / ろくまいる)." imgUrl="/me.webp" />
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 md:p-6 lg:p-8">
             <ProfileBox title="Profile" data={profileData} />
@@ -83,6 +83,6 @@ export default function Home() {
           </div>
         </div>
         <Footer />
-      </MainBox>
+      </>
   );
 }

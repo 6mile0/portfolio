@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { IoMdArrowRoundBack } from 'react-icons/io'
-import { PathInfo } from '../../types/custom'
+import { PathInfo } from '../../../types/pathInfo'
 
 interface Props {
     paths: PathInfo[]
