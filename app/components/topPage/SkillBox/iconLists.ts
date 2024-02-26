@@ -62,6 +62,22 @@ const langList: LangBadge[] = [
     {
         name: "Docker",
         icon: simpleIcon.SiDocker
+    },
+    {
+        name: "SpringBoot",
+        icon: simpleIcon.SiSpring
+    },
+    {
+        name: "Ruby",
+        icon: simpleIcon.SiRuby
+    },
+    {
+        name: "Ruby on Rails",
+        icon: simpleIcon.SiRubyonrails
+    },
+    {
+        name: "Google Cloud",
+        icon: simpleIcon.SiGooglecloud
     }
 ]
 
