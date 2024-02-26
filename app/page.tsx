@@ -17,9 +17,9 @@ const profileData: Profile = {
   sshKeyListUrl: "https://github.com/6mile0.keys"
 }
 
-const mainSkills: string[] = ["TypeScript", "React", "Next.js", "Git", "Kotlin", "Docker"];
-const hadSkills = ["Node.js", "Express.js", "Python", "FastAPI"];
-const studyingSkills = ["Go", "Flutter"];
+const mainSkills: string[] = ["TypeScript", "React", "Next.js", "Node.js", "Express.js", "Python", "FastAPI", "Git", "Docker"];
+const hadSkills = ["Kotlin", "SpringBoot", "Firebase"];
+const studyingSkills = ["Go", "Flutter", "Ruby", "Ruby on Rails"];
 
 const timelineData: TimeLine[] = [
   {
@@ -73,7 +73,7 @@ export default function Home() {
           <div className="flex-1 md:p-6 lg:p-8">
             <ProfileBox title="Profile" data={profileData} />
             <TitleBox title="Skills" />
-            <SkillBox titleName="Work Experience" skillItems={mainSkills} />
+            <SkillBox titleName="Main" skillItems={mainSkills} />
             <SkillBox titleName="Experience" skillItems={hadSkills} />
             <SkillBox titleName="Studying" skillItems={studyingSkills} />
             <Contact />
