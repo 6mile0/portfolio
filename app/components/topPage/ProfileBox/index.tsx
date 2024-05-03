@@ -63,7 +63,7 @@ export default function ProfileBox({ title, data }: Props) {
                         </th>
                         <td className="py-2 text-sm">
                             <p><Link href={"https://github.com/6mile0.keys"} className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200">Secure Shell</Link></p>
-                            <p><Link href={"https://github.com/6mile0.keys"} className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200">The GNU Privacy Guard</Link></p>
+                            <p><Link href={"https://github.com/6mile0.gpg"} className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200">GNU Privacy Guard</Link></p>
                         </td>
                     </tr>
                 </tbody>
