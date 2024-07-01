@@ -1,5 +1,5 @@
 import TitleBox from "../../common/TitleBox"
-import { TimeLine } from '../../types/custom'
+import { TimeLine } from "../../../types/timeLine"
 import Link from "next/link"
 
 interface Props {

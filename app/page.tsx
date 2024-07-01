@@ -3,9 +3,9 @@ import ProfileBox from "./components/topPage/ProfileBox";
 import SkillBox from "./components/topPage/SkillBox";
 import TimeLineBox from "./components/topPage/TimeLineBox";
 import TitleBox from "./components/common/TitleBox";
-import { Profile, TimeLine } from "./components/types/custom";
+import { Profile } from "./types/profile";
+import { TimeLine } from "./types/timeLine";
 import Header from "./components/common/Header";
-import MainBox from "./components/common/MainBox";
 import Footer from "./components/common/Footer";
 
 const profileData: Profile = {
@@ -55,20 +55,20 @@ const timelineData: TimeLine[] = [
     descriptions: "体温報告などを行うことができる、LINEを用いた(顧問の先生と保護者直結型)連絡網サービスを母校の陸上部に提供する。\n※代替サービスの乗り換えに伴い、2022年でサービス終了。"
   },
   {
-    time: "2019-2020",
+    time: "2020/04 - 2021/03",
     title: "単発案件のWeb制作",
     descriptions: "ココナラでいくつかの案件を受注・納品"
   },
   {
-    time: "2018/04",
+    time: "2019/04",
     title: "高校入学"
   }
 ]
 
 export default function Home() {
   return (
-      <MainBox>
-        <Header />
+      <>
+        <Header title="6mile.dev" description="Hello! I&apos;m Kakeru Hokida (a.k.a 6mile / ろくまいる)." imgUrl="/me.webp" />
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 md:p-6 lg:p-8">
             <ProfileBox title="Profile" data={profileData} />
@@ -83,6 +83,6 @@ export default function Home() {
           </div>
         </div>
         <Footer />
-      </MainBox>
+      </>
   );
 }

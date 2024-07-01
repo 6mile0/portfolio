@@ -1,6 +1,6 @@
 import Link from "next/link";
 import TitleBox from "../../common/TitleBox";
-import { Profile } from "../../types/custom";
+import { Profile } from "../../../types/profile";
 
 interface Props {
     title: string;
