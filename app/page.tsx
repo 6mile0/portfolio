@@ -7,6 +7,8 @@ import { Profile } from "./types/profile";
 import { TimeLine } from "./types/timeLine";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
+import AwardBox from "./components/topPage/AwardBox";
+import { Awards } from "./types/awards";
 
 const profileData: Profile = {
   birthday: "2003,10,04",
@@ -22,6 +24,22 @@ const hadSkills = ["Kotlin", "SpringBoot", "Firebase"];
 const studyingSkills = ["Go", "Flutter", "Ruby", "Ruby on Rails"];
 
 const timelineData: TimeLine[] = [
+  {
+    time: "2024/09/09 - 2024/09/13",
+    title: "ラクスル株式会社でインターン",
+    descriptions: "1週間で実課題を解決するタスクにチームで取り組みました。",
+  },
+  {
+    time: "2024/08/19 - 2024/08/30",
+    title: "サイボウズ株式会社でインターン",
+    descriptions: "2週間でkintone開発チーム内の実際のタスクである、検索画面のReact化に取り組みました。",
+    buttons: [
+      {
+        title: "完走賞",
+        to: "/assets/cybozu_award.png"
+      }
+    ]
+  },
   {
     time: "2023/04 - 現在",
     title: "ZUNDA株式会社でアルバイト",
@@ -65,24 +83,39 @@ const timelineData: TimeLine[] = [
   }
 ]
 
+const hadAwards: Awards = [
+  {
+    title: "学部長賞（コンピュータサイエンス学部）2024",
+    url: "https://www.openbadge-global.com/api/v1.0/openBadge/v2/Wallet/Public/GetAssertionShare/QnlyOExIcis1dFAwYVVFK1JXd0NSZz09",
+    date: "2024/03/25"
+  },
+  {
+    title: "学部長賞（コンピュータサイエンス学部）",
+    url: "https://www.openbadge-global.com/api/v1.0/openBadge/v2/Wallet/Public/GetAssertionShare/Ni9sbDFUSnRSRVFuMUpndmRKUEJXQT09",
+    date: "2023/04/01"
+  }
+]
+
 export default function Home() {
   return (
-      <>
-        <Header title="6mile.dev" description="Hello! I&apos;m Kakeru Hokida (a.k.a 6mile / ろくまいる)." imgUrl="/me.webp" />
-        <div className="flex flex-col md:flex-row">
-          <div className="flex-1 md:p-6 lg:p-8">
-            <ProfileBox title="Profile" data={profileData} />
-            <TitleBox title="Skills" />
-            <SkillBox titleName="Main" skillItems={mainSkills} />
-            <SkillBox titleName="Experience" skillItems={hadSkills} />
-            <SkillBox titleName="Studying" skillItems={studyingSkills} />
-            <Contact />
-          </div>
-          <div className="flex-1 md:p-6 lg:p-8">
-            <TimeLineBox title="TimeLine" data={timelineData} />
-          </div>
+    <>
+      <Header title="6mile.dev" description="Hello! I&apos;m Kakeru Hokida (a.k.a 6mile / ろくまいる)." imgUrl="/me.webp" />
+      <div className="flex flex-col md:flex-row">
+        <div className="flex-1 md:p-6 lg:p-8">
+          <ProfileBox title="Profile" data={profileData} />
+          <TitleBox title="Skills" />
+          <SkillBox titleName="Main" skillItems={mainSkills} />
+          <SkillBox titleName="Experience" skillItems={hadSkills} />
+          <SkillBox titleName="Studying" skillItems={studyingSkills} />
+          <TitleBox title="Awards" />
+          <AwardBox awards={hadAwards} />
+          <Contact />
         </div>
-        <Footer />
-      </>
+        <div className="flex-1 md:p-6 lg:p-8">
+          <TimeLineBox title="TimeLine" data={timelineData} />
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 }
