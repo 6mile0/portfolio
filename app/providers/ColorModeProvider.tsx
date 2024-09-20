@@ -35,7 +35,7 @@ export const ColorModeProvider: FC<{ children: ReactNode }> = ({ children }) => 
   const preferColorSchemeIsDark = useMatchMedia("(prefers-color-scheme: dark)", true);
 
   useEffect(() => {
-    const storageValue = window.localStorage.getItem("stin-blog-color-mode");
+    const storageValue = window.localStorage.getItem("colorMode");
     if (storageValue === "light" || storageValue === "dark") {
       _setColorMode(storageValue);
     } else {
@@ -45,7 +45,7 @@ export const ColorModeProvider: FC<{ children: ReactNode }> = ({ children }) => 
 
   const setColorMode = useCallback((color: ColorMode) => {
     _setColorMode(color);
-    window.localStorage.setItem("stin-blog-color-mode", color);
+    window.localStorage.setItem("colorMode", color);
   }, []);
 
   const actualColorMode =
