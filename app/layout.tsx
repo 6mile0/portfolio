@@ -4,6 +4,8 @@ import MainBox from "./components/common/MainBox";
 import "./globals.css";
 import 'react-tooltip/dist/react-tooltip.css'
 
+import {ColorModeProvider} from "./providers/ColorModeProvider";
+
 const notoSans = Noto_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -33,13 +35,26 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
-    <html lang="ja">
-      <body className={`${notoSans.className} bg-custom-background-right dark:bg-custom-background-dark`}>
-        <MainBox>
-          {children}
-        </MainBox>
-      </body>
+    <html suppressHydrationWarning lang="ja">
+      {
+        // Thanks to https://blog.stin.ink/articles/how-to-implement-a-perfect-dark-mode
+      }
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!function(){const e=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light",o=localStorage.getItem("stin-blog-color-mode"),t="system"===o||null==o?e:"light"===o?"light":"dark";window.document.documentElement.dataset.colorMode=t}();`,
+          }}
+        />
+      </head>
+      <ColorModeProvider>
+        <body className={`${notoSans.className} bg-custom-background-right dark:bg-custom-background-dark`}>
+          <MainBox>
+            {children}
+          </MainBox>
+        </body>
+      </ColorModeProvider>
     </html>
   );
 }

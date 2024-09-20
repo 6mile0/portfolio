@@ -62,14 +62,14 @@ export default function ProfileBox({ title, data }: Props) {
                             公開鍵
                         </th>
                         <td className="py-2 text-sm">
-                            <p><Link href={"https://github.com/6mile0.keys"} className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200">Secure Shell</Link></p>
-                            <p><Link href={"https://github.com/6mile0.gpg"} className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200">GNU Privacy Guard</Link></p>
+                            <p><Link href={"https://github.com/6mile0.keys"} className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-300">Secure Shell</Link></p>
+                            <p><Link href={"https://github.com/6mile0.gpg"} className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-300">GNU Privacy Guard</Link></p>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div className="m-3 text-sm text-gray-600">
-                開発実績など含む詳細版(PDF)は<a href="/resume.pdf" target="_blank" className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200">こちら</a>からご覧いただけます。
+            <div className="m-3 text-sm text-gray-600 dark:text-gray-200">
+                開発実績など含む詳細版(PDF)は<a href="/resume.pdf" target="_blank" className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-300">こちら</a>からご覧いただけます。
             </div>
         </div>
     )

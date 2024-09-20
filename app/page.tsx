@@ -9,6 +9,7 @@ import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import AwardBox from "./components/topPage/AwardBox";
 import { Awards } from "./types/awards";
+import DarkModeSelector from "./components/common/DarkModeSelector";
 
 const profileData: Profile = {
   birthday: "2003,10,04",
@@ -116,6 +117,7 @@ export default function Home() {
         </div>
       </div>
       <Footer />
+      <DarkModeSelector />
     </>
   );
 }
