@@ -7,7 +7,7 @@ type Props = {
 export default function AwardBox({awards}: Props) {
     return (
         <div className="mb-5">
-            <div className="mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-300">
+            <div className="rounded-lg bg-white shadow-lg dark:bg-gray-300">
                 <ul className="divide-y divide-gray-100 dark:divide-gray-400 py-2 px-4">
                     {awards.map((award, index) => (
                         <li key={index} className="flex py-2">
