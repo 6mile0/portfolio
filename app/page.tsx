@@ -26,11 +26,6 @@ const studyingSkills = ["Go", "Ruby", "Ruby on Rails", "Nest.js"];
 
 const timelineData: TimeLine[] = [
   {
-    time: "2024/12 - 現在",
-    title: "Airion株式会社でインターン",
-    descriptions: "null",
-  },
-  {
     time: "2024/09/09 - 2024/09/13",
     title: "ラクスル株式会社でインターン",
     descriptions: "1週間で実課題のテーマにチームで取り組みました。主にリーダで技術選定やタスク管理、実装面は主にフロントエンドを担当しました。",
