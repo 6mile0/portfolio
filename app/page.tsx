@@ -20,20 +20,20 @@ const profileData: Profile = {
   sshKeyListUrl: "https://github.com/6mile0.keys"
 }
 
-const mainSkills: string[] = ["TypeScript", "React", "Next.js", "Node.js", "Express.js", "Python", "FastAPI", "Git", "Docker"];
+const mainSkills: string[] = ["TypeScript", "React", "Next.js", "Node.js", "Express.js", "Hono.js", "Python", "FastAPI", "Git", "Docker"]
 const hadSkills = ["Kotlin", "SpringBoot", "Firebase"];
-const studyingSkills = ["Go", "Flutter", "Ruby", "Ruby on Rails"];
+const studyingSkills = ["Go", "Ruby", "Ruby on Rails", "Nest.js"];
 
 const timelineData: TimeLine[] = [
   {
     time: "2024/09/09 - 2024/09/13",
     title: "ラクスル株式会社でインターン",
-    descriptions: "1週間で実課題を解決するタスクにチームで取り組みました。",
+    descriptions: "1週間で実課題のテーマにチームで取り組みました。主にリーダで技術選定やタスク管理、実装面は主にフロントエンドを担当しました。",
   },
   {
     time: "2024/08/19 - 2024/08/30",
     title: "サイボウズ株式会社でインターン",
-    descriptions: "2週間でkintone開発チーム内の実際のタスクである、検索画面のReact化に取り組みました。",
+    descriptions: "2週間でkintone開発チーム内の実際のタスクに取り組みました。主に検索画面のReact化を担当しました。",
     buttons: [
       {
         title: "完走賞",
@@ -44,21 +44,15 @@ const timelineData: TimeLine[] = [
   {
     time: "2023/04 - 現在",
     title: "ZUNDA株式会社でアルバイト",
-    descriptions: "B2Bの販売管理システムの開発、コーポレートページのコーディングや運用を担当しています。",
-    buttons: [
-      {
-        title: "実績",
-        to: "https://www.zunda.co.jp/blog/company-site-made-with-contentful"
-      }
-    ]
+    descriptions: "B2Bの販売管理システムの開発を行っています。主にフロントエンドを担当しています。",
   },
   {
     time: "2022/04 - 現在",
     title: "メディアロビー(株式会社有隣堂)でアルバイト",
-    descriptions: "学生のPCトラブル対応や、新入生PCのキッティング業務などを行っています。",
+    descriptions: "従来の新入生受付システムの開発・運用体制の見直しを行い、新たなシステムの開発を行いました。",
     buttons: [
       {
-        title: "実績",
+        title: "Zenn記事",
         to: "https://zenn.dev/6mile/articles/359f52afbc3709"
       }
     ]
