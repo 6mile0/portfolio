@@ -78,6 +78,14 @@ const langList: LangBadge[] = [
     {
         name: "Google Cloud",
         icon: simpleIcon.SiGooglecloud
+    },
+    {
+        name: "Nest.js",
+        icon: simpleIcon.SiNestjs
+    },
+    {
+        name: "Hono.js",
+        icon: simpleIcon.SiHono
     }
 ]
 

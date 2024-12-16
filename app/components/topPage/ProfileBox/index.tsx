@@ -68,9 +68,6 @@ export default function ProfileBox({ title, data }: Props) {
                     </tr>
                 </tbody>
             </table>
-            <div className="m-3 text-sm text-gray-600 dark:text-gray-200">
-                開発実績など含む詳細版(PDF)は<a href="/resume.pdf" target="_blank" className="text-gray-900 border-b hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-300">こちら</a>からご覧いただけます。
-            </div>
         </div>
     )
 }
