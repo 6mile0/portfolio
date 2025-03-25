@@ -80,6 +80,11 @@ const timelineData: TimeLine[] = [
 
 const hadAwards: Awards = [
   {
+    title: "学部長賞（コンピュータサイエンス学部）2025",
+    url: "https://www.openbadge-global.com/api/v1.0/openBadge/v2/Wallet/Public/GetAssertionShare/L3cxUFhtWkVJTXcvR2c5MHpCOGoxQT09",
+    date: "2025/03/24"
+  },
+  {
     title: "学部長賞（コンピュータサイエンス学部）2024",
     url: "https://www.openbadge-global.com/api/v1.0/openBadge/v2/Wallet/Public/GetAssertionShare/QnlyOExIcis1dFAwYVVFK1JXd0NSZz09",
     date: "2024/03/25"
